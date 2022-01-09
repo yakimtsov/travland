@@ -5,6 +5,9 @@ body{
     font-family: 'Ribeye', cursive;
     font-family: 'Roboto', sans-serif;
 }
+a{
+    text-decoration: none;
+}
 .container{
     max-width: 1200px;
     margin: 0 auto;
@@ -39,7 +42,6 @@ body{
     font-size: 18px;
     line-height: 150%;
     color: #FFFFFF;
-    text-decoration: none;
 }
 .nav-link:hover{
     color:#C9453B;
@@ -124,7 +126,7 @@ button:hover{
     max-width: 360px;
     margin: 50px 0 80px;
 }
-.location__content-card:not(last-of-child){
+.location__content-card:not(:last-child){
     margin-right: 30px;
 }
 .location__content-card-title{
@@ -205,11 +207,14 @@ button:hover{
     display: flex;
     align-items: center;
 }
+.blog__content-block-2:not(last-of-child){
+    margin-bottom: 30px;
+}
 .blog__content-block-2-text{
     max-width: 250px;
     margin-left: 30px;
 }
-.blog__content-block-link{
+.blog__content-block-link, .footer__content-subscribe-title{
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -217,5 +222,55 @@ button:hover{
     line-height: 150%;
     color: #000000;
     text-decoration: none;
+}
+
+.blog__content{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+}
+.blog__content-block-text{
+    margin: 15px 0;
+}
+
+/* Footer Section */
+
+.footer{
+    background: #2694990A;
+    padding: 70px 0;
+}
+.footer-logo{
+    color: #000000;
+    margin-bottom: 40px;
+}
+.footer-icon{
     margin-top: 20px;
+}
+.footer-icon>a:not(:last-child){
+    margin-right: 27px;
+}
+.footer__content-contact-text, .footer__content-menu-li, .footer__content-subscribe-input, .footer__content-subscribe-input::placeholder{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.06em;
+    color: #000000;
+}
+.footer__content-menu>div:not(:last-child){
+    margin-bottom: 20px;
+}
+.footer__content{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__content-subscribe-title{
+    margin-bottom: 45px;
+}
+.footer__content-subscribe-input{
+    padding: 10px 100px 10px 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
 }
